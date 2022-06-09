@@ -25,22 +25,22 @@ document.addEventListener("DOMContentLoaded", event => {
 //         .catch(console.log)
 // }
 
-function updateCompany(e) {
-    const db = firebase.firestore();
-    const myCompanies = db.collection("Companies").doc("GymReapers");
-    myCompanies.update({ title: e.target.value})
-}
+// function updateCompany(e) {
+//     const db = firebase.firestore();
+//     const myCompanies = db.collection("Companies").doc("GymReapers");
+//     myCompanies.update({ title: e.target.value})
+// }
 
-function uploadFile(files) {
-    const storageRef = firebase.storage().ref();
-    const imgRef = storageRef.child('Step1.png');
+// function uploadFile(files) {
+//     const storageRef = firebase.storage().ref();
+//     const imgRef = storageRef.child('Step1.png');
 
-    const file = file.item(0);
-    const task = imgRef.put(file);
+//     const file = file.item(0);
+//     const task = imgRef.put(file);
 
-    task.then(snapshot => {
-        console.log(snapshot)
-        const url = snapshot.downloadURL
-        document.querySelector('#imgUpload').setAtribute('src', url);
-    })
-}
+//     task.then(snapshot => {
+//         console.log(snapshot)
+//         const url = snapshot.downloadURL
+//         document.querySelector('#imgUpload').setAtribute('src', url);
+//     })
+// }
